@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Account Activation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #333333;
+      }
+
+      p {
+        margin-bottom: 15px;
+      }
+
+      .activation-code {
+        font-size: 24px;
+        font-weight: bold;
+        color: #007bff;
+        padding: 10px;
+        border: 1px solid #007bff;
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      .activation-link {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 3px;
+        margin-top: 20px;
+      }
+
+      .activation-link:hover {
+        background-color: #0056b3;
+      }
+
+      footer {
+        margin-top: 20px;
+        font-size: 12px;
+        color: #777777;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to Our Platform!</h1>
+      <p>Dear <%= user.name %>,</p>
+      <p>
+        Thank you for signing up! To activate your account, please use the
+        following activation code:
+      </p>
+      <p class="activation-code"><%= activationCode %></p>
+      <p>If you did not request this, please ignore this email.</p>
+
+      <footer>Best regards,<br />The Admin Team</footer>
+    </div>
+  </body>
+</html>
